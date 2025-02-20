@@ -26,5 +26,10 @@ pipeline {
         sh 'echo "Deploying application"'
       }
     }
+    stage('Run code') {
+      steps {
+        sh 'python3 python.py'
+      }
+    }
   }
 }
